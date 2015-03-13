@@ -102,7 +102,7 @@ class AreasController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
-/**
+	/**
  * Displays a view
  *
  * @return void
@@ -139,3 +139,4 @@ class AreasController extends AppController {
 		}
 	}
 }
+

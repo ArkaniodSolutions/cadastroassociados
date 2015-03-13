@@ -1,14 +1,19 @@
-<div class="areas view">
-<h2><?php echo __('Area'); ?></h2>
+<div class="cargos view">
+<h2><?php echo __('Cargo'); ?></h2>
 	<dl>
 		<dt><?php echo __('Id'); ?></dt>
 		<dd>
-			<?php echo h($area['Area']['id']); ?>
+			<?php echo h($cargo['Cargo']['id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Nome'); ?></dt>
 		<dd>
-			<?php echo h($area['Area']['nome']); ?>
+			<?php echo h($cargo['Cargo']['nome']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('ValorAlmoço'); ?></dt>
+		<dd>
+			<?php echo h($cargo['Cargo']['valorAlmoço']); ?>
 			&nbsp;
 		</dd>
 	</dl>
@@ -16,17 +21,17 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('Edit Area'), array('action' => 'edit', $area['Area']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Area'), array('action' => 'delete', $area['Area']['id']), array(), __('Are you sure you want to delete # %s?', $area['Area']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Areas'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Area'), array('action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('Edit Cargo'), array('action' => 'edit', $cargo['Cargo']['id'])); ?> </li>
+		<li><?php echo $this->Form->postLink(__('Delete Cargo'), array('action' => 'delete', $cargo['Cargo']['id']), array(), __('Are you sure you want to delete # %s?', $cargo['Cargo']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('List Cargos'), array('action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Cargo'), array('action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Associados'), array('controller' => 'associados', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Associado'), array('controller' => 'associados', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
 <div class="related">
 	<h3><?php echo __('Related Associados'); ?></h3>
-	<?php if (!empty($area['Associado'])): ?>
+	<?php if (!empty($cargo['Associado'])): ?>
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
@@ -47,7 +52,7 @@
 		<th><?php echo __('Mensagem'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
-	<?php foreach ($area['Associado'] as $associado): ?>
+	<?php foreach ($cargo['Associado'] as $associado): ?>
 		<tr>
 			<td><?php echo $associado['id']; ?></td>
 			<td><?php echo $associado['nome']; ?></td>
