@@ -1,14 +1,30 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Area Model
+ * Convenio Model
  *
- * @property Associado $Associado
+ * @property Grupo $Grupo
+ * @property Compra $Compra
  */
-class Area extends AppModel {
+class Convenio extends AppModel {
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
+
+/**
+ * belongsTo associations
+ *
+ * @var array
+ */
+	public $belongsTo = array(
+		'Grupo' => array(
+			'className' => 'Grupo',
+			'foreignKey' => 'grupo_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 
 /**
  * hasMany associations
@@ -16,9 +32,9 @@ class Area extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-		'Associado' => array(
-			'className' => 'Associado',
-			'foreignKey' => 'area_id',
+		'Compra' => array(
+			'className' => 'Compra',
+			'foreignKey' => 'convenio_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',

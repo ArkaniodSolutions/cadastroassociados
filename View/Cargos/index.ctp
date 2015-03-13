@@ -1,22 +1,24 @@
-<div class="areas index">
-	<h2><?php echo __('Areas'); ?></h2>
+<div class="cargos index">
+	<h2><?php echo __('Cargos'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('nome'); ?></th>
+			<th><?php echo $this->Paginator->sort('valorAlmoço'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
 	<tbody>
-	<?php foreach ($areas as $area): ?>
+	<?php foreach ($cargos as $cargo): ?>
 	<tr>
-		<td><?php echo h($area['Area']['id']); ?>&nbsp;</td>
-		<td><?php echo h($area['Area']['nome']); ?>&nbsp;</td>
+		<td><?php echo h($cargo['Cargo']['id']); ?>&nbsp;</td>
+		<td><?php echo h($cargo['Cargo']['nome']); ?>&nbsp;</td>
+		<td><?php echo h($cargo['Cargo']['valorAlmoço']); ?>&nbsp;</td>
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $area['Area']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $area['Area']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $area['Area']['id']), array(), __('Are you sure you want to delete # %s?', $area['Area']['id'])); ?>
+			<?php echo $this->Html->link(__('View'), array('action' => 'view', $cargo['Cargo']['id'])); ?>
+			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $cargo['Cargo']['id'])); ?>
+			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $cargo['Cargo']['id']), array(), __('Are you sure you want to delete # %s?', $cargo['Cargo']['id'])); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -39,7 +41,7 @@
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__('New Area'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('New Cargo'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Associados'), array('controller' => 'associados', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Associado'), array('controller' => 'associados', 'action' => 'add')); ?> </li>
 	</ul>

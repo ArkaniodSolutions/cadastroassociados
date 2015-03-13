@@ -1,11 +1,11 @@
 <?php
-App::uses('Area', 'Model');
+App::uses('Usuario', 'Model');
 
 /**
- * Area Test Case
+ * Usuario Test Case
  *
  */
-class AreaTest extends CakeTestCase {
+class UsuarioTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,8 +13,7 @@ class AreaTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.area',
-		'app.associado'
+		'app.usuario'
 	);
 
 /**
@@ -24,7 +23,7 @@ class AreaTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Area = ClassRegistry::init('Area');
+		$this->Usuario = ClassRegistry::init('Usuario');
 	}
 
 /**
@@ -33,7 +32,7 @@ class AreaTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Area);
+		unset($this->Usuario);
 
 		parent::tearDown();
 	}
