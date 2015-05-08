@@ -6,6 +6,7 @@ App::uses('AppModel', 'Model');
  */
 class Area extends AppModel {
 
+	public $displayField = 'nome';
 /**
  * Validation rules
  *
